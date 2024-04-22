@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class InterfaceDeLinhaDeComando {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bem-vindo à Calculadora de Derivadas!");
+        System.out.println("Digite a função a ser analisada (por exemplo, '2x^3 + 3x^2 - 5x + 7'):");
+        String expressao = scanner.nextLine();
+
+        Function funcao = new Function(expressao);
+        String derivada = funcao.calcularDerivada();
+
+        System.out.println("A derivada da função é: " + derivada);
+
+        scanner.close();
+    }
+}
